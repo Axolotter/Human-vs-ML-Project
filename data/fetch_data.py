@@ -1,6 +1,9 @@
+from ucimlrepo import fetch_ucirepo
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
 
-
-from ucimlrepo import fetch_ucirepo 
 
 def get_data():  
     #=========Copied from UCIML==========#

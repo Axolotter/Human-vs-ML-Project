@@ -1,11 +1,12 @@
-from data.fetch_data import get_data
-import matplotlib as plt
 import os
+from data.fetch_data import get_data
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 def make_plot(var1, var2):
     df, target_name = get_data()
 
-    os.makedirs("plots", exist_ok = true)
+    os.makedirs("data/plots", exist_ok = True)
 
     plt.figure(figsize=(8, 6))
     sns.scatterplot(
@@ -14,6 +15,7 @@ def make_plot(var1, var2):
         y=var2,
         hue=target_name,
         style=target_name,
+        # marker= 'x',
         s=90
     )
 
@@ -26,4 +28,6 @@ def make_plot(var1, var2):
     plt.close()
 
 
-make_plot('age','accident')
+make_plot('age', 'hrs_sitting')
+make_plot('alcohol', 'smoking')
+make_plot('high_fevers', 'season')
