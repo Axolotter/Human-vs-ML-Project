@@ -25,4 +25,5 @@ def make_plot(var1, var2):
     plt.savefig(f'data/plots/{var1}_v_{var2}.png', dpi=150)
     plt.close()
 
-make_plot()
+
+make_plot('age','accident')
