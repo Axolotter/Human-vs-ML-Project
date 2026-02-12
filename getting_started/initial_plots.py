@@ -9,7 +9,7 @@ def make_plot(var1, var2, var3):
 
     target_colors = list(map(lambda s: 'w' if s=='N' else 'r', df[target_name]))
     # print(target_colors)
-    os.makedirs("data/plots", exist_ok = True)
+    os.makedirs("getting_started/plots", exist_ok = True)
 
     sns.set_style("whitegrid", {'axes.grid' : False})
 
@@ -28,8 +28,8 @@ def make_plot(var1, var2, var3):
 
     plt.title(f"Fertility Diagnosis: {var1} vs {var2} vs {var3}")
     
-    plt.savefig(f'data/plots/{var1}_v_{var2}_v_{var3}.png', dpi=150)
-    # plt.close()
+    plt.savefig(f'getting_started/plots/{var1}_v_{var2}_v_{var3}.png', dpi=150)
+    plt.close()
 
 
 make_plot('accident', 'surgical_intervention', 'smoking')
