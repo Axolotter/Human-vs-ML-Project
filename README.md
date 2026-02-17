@@ -17,32 +17,31 @@ You may work alone or with a partner. You may choose to work with the provided P
 
 ---
 
-**Team Members:**  
-- Name 1  
-- Name 2 (if applicable)  
+**Team Members:** 
+- Jax
 
 **Dataset Used:**  
-(e.g. Penguins, Iris, Titanic, etc.)
+Fertility
 
 **Source:**  
-(UCI / Kaggle / Provided dataset)
+UCI
 
 **Target Variable (What we are predicting):**  
-(e.g. species, survival, diagnosis)
+Altered fertility
 
 **Features Used:**  
-- Feature 1  
-- Feature 2  
-- Feature 3
+- Accident or serious trauma
+- Surgical intervention
+- Smoking habits
 
 **[Video Review](https://)**
 
 ## Human Algorithm
-
 ### Pseudo-Code
-```text
-Write your human decision rules here.
-```
+If no accident and no surgery and yes smoking:
+   Flag
+If no accident and yes surgery and not max smoking:
+   Flag
 
 When examining the data and visualizations, we focused on the features ___ and ___ because ___.
 
