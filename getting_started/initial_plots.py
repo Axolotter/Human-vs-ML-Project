@@ -35,3 +35,4 @@ def make_plot(var1, var2, var3):
 make_plot('accident', 'surgical_intervention', 'smoking')
 make_plot('high_fevers', 'smoking', 'child_diseases')
 make_plot('season', 'alcohol', 'surgical_intervention')
+print("Initial Plots made")
