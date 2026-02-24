@@ -55,8 +55,9 @@ print(conf_matrix)
 # Print a scatter plot showing correct vs incorrect predictions.
 os.makedirs("human_algorithm/plots", exist_ok=True)
 
-target_colors = list(map(lambda s: 'g' if s=='correct' else 'w', test_df[target_name]))
+target_colors = list(map(lambda s: 'g' if s==True else 'r', test_df['correct']))
 # print(target_colors)
+# print(test_df['correct'])
 
 sns.set_style("whitegrid", {'axes.grid' : False})
 
@@ -76,7 +77,7 @@ ax.set_zlabel("smoking")
 # plt.legend(title='Prediction Correct')
 plt.title(f"Fertility Diagnosis: accident vs surgical_intervention vs smoking")
 
-plt.savefig(f'human_algorithm/plots/human_model_training_results.png.png', dpi=150)
+plt.savefig(f'human_algorithm/plots/human_model_training_results.png', dpi=150)
 
 # plt.figure(figsize=(8, 6))
 # sns.scatterplot(
