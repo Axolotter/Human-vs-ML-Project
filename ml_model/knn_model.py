@@ -72,43 +72,25 @@ train_df['correct'] = train_df['ML_prediction'] == train_df[target_name]
 # Create a visualization of KNN classifier results
 os.makedirs("ml_model/plots", exist_ok=True)
 
-# Create a visualization for training data
-# I left this commented out, but feel free to toggle this plot to see training results.
-# plt.figure(figsize=(8, 6))
-# sns.scatterplot(
-#     data=train_df,
-#     x='petal length',
-#     y='petal width',
-#     hue='correct',
-#     style='correct',
-#     s=100,
-#     palette={True: 'green', False: 'red'}
-# )
+target_colors = list(map(lambda s: 'g' if s=='N' else 'r', df[target_name]))
+# print(target_colors)
 
-# plt.title('KNN Algorithm (Training Set): Correct vs Incorrect Predictions')
-# plt.xlabel('Petal Length (cm)')
-# plt.ylabel('Petal Width (cm)')
-# plt.legend(title='Prediction Correct')
-# plt.grid(True)
-# plt.savefig('example/e_ml_model/plots/knn_model_training_results.png', dpi=150)
-# plt.close()
+sns.set_style("whitegrid", {'axes.grid' : False})
 
-# Create a visualization for test data
-# plt.figure(figsize=(8, 6))
-# sns.scatterplot(
-#     data=test_df,
-#     x='petal length',
-#     y='petal width',
-#     hue='correct',
-#     style='correct',
-#     s=100,
-#     palette={True: 'green', False: 'red'}
-# )
+fig = plt.figure(figsize=(6,6))
 
-# plt.title('KNN Algorithm: Correct vs Incorrect Predictions')
-# plt.xlabel('Petal Length (cm)')
-# plt.ylabel('Petal Width (cm)')
-# plt.legend(title='Prediction Correct')
-# plt.grid(True)
-# plt.savefig('example/e_ml_model/plots/knn_model_test_results.png', dpi=150)
-# plt.close()
+ax = fig.add_subplot(111, projection='3d')
+
+x = "surgical_intervention"
+y = "accident"
+z = "smoking"
+ax.scatter(x, y, z, c=target_colors, data=df, marker='o')
+# cmap='RdYlGn_r'
+ax.set_xlabel(x)
+ax.set_ylabel(y)
+ax.set_zlabel(z)
+
+plt.title(f"Fertility Diagnosis: ML Model Training Results")
+
+plt.savefig(f'ml_model/plots/ml_model_training_results.png', dpi=150)
+plt.close()
