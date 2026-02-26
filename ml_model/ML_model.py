@@ -28,6 +28,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 # NuSVC range: 0.08-.23 best found: 0.08 with .5 test split
 # RandomForest range: best between 1-10
 # MLPClassifier range: 1
+# KNN: k =1
 k = .2
 r = 1
 # ml = KNeighborsClassifier(n_neighbors=k)
@@ -39,8 +40,8 @@ ml = NuSVC(nu=k, random_state=r)
 ml.fit(X_train, y_train)
 y_pred = ml.predict(X_test)
 y_train_pred = ml.predict(X_train)
-print(y_pred)
-print(y_test)
+# print(y_pred)
+# print(y_test)
 # print(y_train_pred)
 # create confusion matrix
 conf_matrix_ml = pd.crosstab(
@@ -90,7 +91,7 @@ ax.set_xlabel(x)
 ax.set_ylabel(y)
 ax.set_zlabel(z)
 
-plt.title(f"Fertility Diagnosis: ML Model Training Results")
+plt.title(f"Fertility Diagnosis: MLPClassifier Model Training Results, k={k}, split=.7")
 
-plt.savefig(f'ml_model/plots/ml_model_training_results.png', dpi=150)
+plt.savefig(f'ml_model/plots/MLP_model_training_results.png', dpi=150)
 plt.close()
