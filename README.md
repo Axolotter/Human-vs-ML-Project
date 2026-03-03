@@ -61,7 +61,7 @@ An example where the algorithm did not perform as expected is when the inputs we
 
 These examples of success and failure highlight patterns in the data or limitations in our rules, such as the incredibly binary nature of it.
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/23ee1e49-da76-47c2-97b8-c8fbcbef179c" />
+<img width="315" height="334" alt="image" src="human_algorithm/plots/human_model_training_results.png" />
 
 ## Machine Learning Model
 
@@ -79,4 +79,4 @@ Accuracy: 55.71%
 While the accuracy on this model is 'lower' than the human model, it does not miss any altered outcomes. This makes it more helpful to patients than the human algorithm, as a 'normal' prediction means it is definitely normal, although an 'altered' prediction may still mean you are normal. The best things to do would be expand this dataset, getting more data points and less binary data. 
 
 
-<img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
+<img width="315" height="334" alt="image" src="ml_model/plots/NuSVC_model_training_results.png" />
