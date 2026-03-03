@@ -76,10 +76,7 @@ Accuracy: 55.71%
 | N                 |   31    |   31    |
 | O                 |    0    |    8    |
 
-The table/visualization shows a clear pattern where the model predicts ___ when ___, indicating a strong relationship between these features.
+While the accuracy on this model is 'lower' than the human model, it does not miss any altered outcomes. This makes it more helpful to patients than the human algorithm, as a 'normal' prediction means it is definitely normal, although an 'altered' prediction may still mean you are normal. The best things to do would be expand this dataset, getting more data points and less binary data. 
 
-The confusion matrix reveals that the model most often confuses ___ with ___, suggesting these classes have similar feature values.
-
-Compared to the human algorithm, the KNN model shows different behavior when ___, as seen in the ___ visualization.
 
 <img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/199ae59d-3470-40c6-9669-60e62b211619" />
