@@ -66,7 +66,7 @@ These examples of success and failure highlight patterns in the data or limitati
 
 ## Machine Learning Model
 
-I test a bunch of different machine learning models to find the best one, since KNN wasn't working very well for each. There are graphs for each of them in the ml_model plot folder. I found the best result with NuSVC with a nu value of .2 and a split of 30% training. Even though the accuracy percentage is not very good, it has a much better accuracy when the actual is altered, which is best in medical applications. This model gave me no false negatives, meaning everyone who would be returned a negative result is definitely normal. While it has a greater error with predicted altered actual normal, it catches every altered case which I believe is the most important in this case. 
+I tested a bunch of different machine learning models to find the best one, since KNN wasn't working very well for each. There are graphs for each of them in the ml_model plot folder. I found the best result with NuSVC with a nu value of .2 and a split of 30% training. Even though the accuracy percentage is not very good, it has a much better accuracy when the actual is altered, which is best in medical applications. This model gave me no false negatives, meaning everyone who would be returned a negative result is definitely normal. While it has a greater error with predicted altered actual normal, it catches every altered case which I believe is the most important in this case. 
 
 ### Confusion Matrix
 
