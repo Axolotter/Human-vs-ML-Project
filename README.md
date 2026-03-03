@@ -51,11 +51,10 @@ From the summary tables and visualizations, it appeared that a combination of sm
 
 Accuracy: 61.11%
 
-| Actual \ Predicted |  N |  O |
-|--------------------|---------|
-| N                  | 51 | 28 |
-| O                  | 7  | 4  |
-
+| Actual \ Predicted |  N     |  O     |
+|--------------------|--------|--------|
+| N                  | 51     | 28     |
+| O                  | 7      | 4      |
 
 One example where our algorithm worked well is when the inputs were in most locations, leading to a correct prediction of N because most of the data was normal.
 
