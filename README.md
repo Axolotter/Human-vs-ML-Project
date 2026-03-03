@@ -43,47 +43,38 @@ If no accident and no surgery and yes smoking:
 If no accident and yes surgery and not max smoking:
    Flag
 
-When examining the data and visualizations, we focused on the features ___ and ___ because ___.
-
-The plots/tables suggested a possible threshold for ___, and we considered values above or below this point to see how they might relate to ___.
-
-From the summary tables and visualizations, it appeared that ___ could influence classification, which led us to ___ in our decision rules.
+When examining the data and visualizations, we focused on these features because they showed the clearest results with only binary data.
+The plots showed that there was clustering with these features, so we considered values that met these clusters. 
+From the summary tables and visualizations, it appeared that a combination of smoking, surgery, or accident could influence classification, which led us to choosing these specific points in our decision rules.
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 61.11%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
-|-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+| Actual \ Predicted |  N |  O |
+|--------------------|---------|
+| N                  | 51 | 28 |
+| O                  | 7  | 4  |
+One example where our algorithm worked well is when the inputs were in most locations, leading to a correct prediction of N because most of the data was normal.
 
-One example where our algorithm worked well is when the inputs were ___, leading to a correct prediction of ___ because ___.
+An example where the algorithm did not perform as expected is when the inputs were altered, resulting in a prediction of N instead of O, which may have happened because the data is very binary, meaning the clumps were not totally accurate.
 
-An example where the algorithm did not perform as expected is when the inputs were ___, resulting in a prediction of ___ instead of ___, which may have happened because ___.
-
-These examples of success and failure highlight patterns in the data or limitations in our rules, such as ___.
+These examples of success and failure highlight patterns in the data or limitations in our rules, such as the incredibly binary nature of it.
 
 <img width="315" height="334" alt="image" src="https://github.com/user-attachments/assets/23ee1e49-da76-47c2-97b8-c8fbcbef179c" />
 
 ## Machine Learning Model
 
-We chose a value of k = ___ after comparing model performance across different values of k and observing that ___.
-
-When analyzing the outputs and metrics, we noticed that changing k affected ___, which influenced our final choice.
-
-Based on the results shown in the tables or visualizations, k = ___ best matched our goals for model performance because ___.
+I test a bunch of different machine learning models to find the best one, since KNN wasn't working very well for each. There are graphs for each of them in the ml_model plot folder. I found the best result with NuSVC with a nu value of .2 and a split of 30% training. Even though the accuracy percentage is not very good, it has a much better accuracy when the actual is altered, which is best in medical applications. This model gave me no false negatives, meaning everyone who would be returned a negative result is definitely normal. While it has a greater error with predicted altered actual normal, it catches every altered case which I believe is the most important in this case. 
 
 ### Confusion Matrix
 
-Accuracy: ?
+Accuracy: 55.71%
 
-| Actual \ Predicted | Class 1 | Class 2 | Class 3 |
-|-------------------|---------|---------|---------|
-| **Class 1**       |         |         |         |
-| **Class 2**       |         |         |         |
-| **Class 3**       |         |         |         |
+| Actual \ Predicted | Class 1 | Class 2 |
+|-------------------|---------|---------|
+| N                 |   31    |   31    |
+| O                 |    0    |    8    |
 
 The table/visualization shows a clear pattern where the model predicts ___ when ___, indicating a strong relationship between these features.
 
