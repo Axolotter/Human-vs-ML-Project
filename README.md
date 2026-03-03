@@ -55,6 +55,8 @@ Accuracy: 61.11%
 |--------------------|---------|
 | N                  | 51 | 28 |
 | O                  | 7  | 4  |
+
+
 One example where our algorithm worked well is when the inputs were in most locations, leading to a correct prediction of N because most of the data was normal.
 
 An example where the algorithm did not perform as expected is when the inputs were altered, resulting in a prediction of N instead of O, which may have happened because the data is very binary, meaning the clumps were not totally accurate.
