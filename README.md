@@ -71,7 +71,7 @@ I test a bunch of different machine learning models to find the best one, since 
 
 Accuracy: 55.71%
 
-| Actual \ Predicted | Class 1 | Class 2 |
+| Actual \ Predicted |  N     | O       |
 |-------------------|---------|---------|
 | N                 |   31    |   31    |
 | O                 |    0    |    8    |
