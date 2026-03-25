@@ -34,7 +34,7 @@ Altered fertility
 - Surgical intervention
 - Smoking habits
 
-**[Video Review](https://)**
+**[Video Review]([https://](https://drive.google.com/file/d/1Xqm8eF3KbtkHaNgn3u5yp_3o0PNJI9Sj/view?usp=sharing))**
 
 ## Human Algorithm
 ### Pseudo-Code
