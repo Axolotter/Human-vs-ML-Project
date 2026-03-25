@@ -36,6 +36,8 @@ Altered fertility
 
 **[Video Review]([https://drive.google.com/file/d/1Xqm8eF3KbtkHaNgn3u5yp_3o0PNJI9Sj/view?usp=sharing])**
 
+https://drive.google.com/file/d/1Xqm8eF3KbtkHaNgn3u5yp_3o0PNJI9Sj/view?usp=sharing
+
 ## Human Algorithm
 ### Pseudo-Code
 If no accident and no surgery and yes smoking:
